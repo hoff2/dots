@@ -1,0 +1,2 @@
+#! /bin/bash
+open "https://github.com/search?q=\"$1\"+user:Banno&type=Code&utf8=%E2%9C%93"

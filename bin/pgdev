@@ -1,0 +1,4 @@
+#! /bin/bash
+
+export PGPASSWORD=password
+psql -h dev.banno.com -p 5432 -U banno_db -d banno_all

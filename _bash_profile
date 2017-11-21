@@ -1,0 +1,11 @@
+export GITHUB_TOKEN=74c66cea0150b2c8be33cf46353fcd6dd3af1192
+export JAVA_HOME=$(/usr/libexec/java_home)
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$HOME/bin:$PATH
+export SCALA_HOME=/usr/local/share/scala
+export CABAL_HOME=~/.cabal
+export PATH=$SCALA_HOME/bin:$CABAL_HOME/bin:$PATH
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+[[ -r ~/.bashrc ]] && . ~/.bashrc
