@@ -1,14 +1,15 @@
 #!/bin/bash
 
-tmux -CC attach || tmux -CC
+# supposedly use this for iTerm integration
+# but I only seem to have problems with it
+#tmux -CC attach || tmux -CC
 
-# non-iTerm?
-#if [ "$TERM" != "screen" ]
-#then
-#    if type tmux >/dev/null 2>&1
-#    then
-#        tmux att || tmux \
-#            new -s Main \; \
-#            neww -n ruby "pry"
-#    fi
-#fi
+if [ "$TERM" != "screen" ]
+then
+    if type tmux >/dev/null 2>&1
+    then
+        tmux att || tmux \
+            new -s Main \; \
+            neww -n ruby "pry"
+    fi
+fi
