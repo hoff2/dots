@@ -334,7 +334,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
-  (setq paradox-github-token "9b9fc9b57716a5c862ee5ab2c99dbc9ddcf4c6f2")
+  (load "~/github-token.el")
   (setq ensime-startup-snapshot-notification nil)
   (global-set-key (kbd "M-RET RET") 'toggle-truncate-lines)
   (global-set-key (kbd "M-RET SPC") 'whitespace-cleanup)
