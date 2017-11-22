@@ -22,5 +22,3 @@ alias ll="ls -lah"
 alias big-machine="big machine restart && eval $(docker-machine env banno-big) && big machine add-route"
 alias big-update="yes | big update && big compose regenerate && big pull"
 alias nw="tmux new-window"
-
-t
