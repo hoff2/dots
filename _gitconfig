@@ -12,6 +12,7 @@ email = chuck.hoffman@banno.com
     ca = commit -a --verbose
     cm = commit -m
     cam = commit -a -m
+    br = branch
     m = commit --amend --verbose
 
     d = diff
@@ -28,4 +29,4 @@ email = chuck.hoffman@banno.com
     # list aliases
     la = "!git config -l | grep alias | cut -c 7-"
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+        insteadOf = https://github.com/
