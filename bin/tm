@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# supposedly use this for iTerm integration
-# but I only seem to have problems with it
-#tmux -CC attach || tmux -CC
-
 if [ "$TERM" != "screen" ]
 then
     if type tmux >/dev/null 2>&1

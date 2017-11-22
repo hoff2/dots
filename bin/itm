@@ -1,0 +1,4 @@
+#!/bin/bash
+
+tmux -CC attach || tmux -CC
+
