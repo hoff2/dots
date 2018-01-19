@@ -7,9 +7,9 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 export EDITOR='et'
 # open editor in a split tmux window
-function e {
-  tmux split-window -n "Edit: $@" "$EDITOR $@"
-} 
+#function e {
+#  tmux split-window -n"Edit: $@" "$EDITOR $@"
+#}
 
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
@@ -19,6 +19,8 @@ PS1="\w\$(parse_git_branch) $ "
 eval "$(hub alias -s)"
 alias be="bundle exec "
 alias ll="ls -lah"
-alias big-machine="big machine restart && eval $(docker-machine env banno-big) && big machine add-route"
-alias big-update="yes | big update && big compose regenerate && big pull"
 alias nw="tmux new-window"
+alias pgprod="psql -hpostgres11-lks.production-2.banno-internal.com -Ubanno -dbanno_all"
+alias big-start="big machine restart && eval $(docker-machine env banno-big) && big machine add-route"
+alias big-update="yes | big update && big compose regenerate && big pull"
+alias big-stop="big destroy && docker-machine stop banno-big"
