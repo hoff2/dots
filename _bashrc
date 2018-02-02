@@ -5,7 +5,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export EDITOR='et'
+EDITOR='et'
 # open editor in a split tmux window
 #function e {
 #  tmux split-window -n"Edit: $@" "$EDITOR $@"
@@ -24,3 +24,10 @@ alias pgprod="psql -hpostgres11-lks.production-2.banno-internal.com -Ubanno -dba
 alias big-start="big machine restart && eval $(docker-machine env banno-big) && big machine add-route"
 alias big-update="yes | big update && big compose regenerate && big pull"
 alias big-stop="big destroy && docker-machine stop banno-big"
+
+PRODDB=postgres11-lks.production-2.banno-internal.com
+UATDB=postgres10-lks.uat-2.banno-internal.com
+STAGINGDB=postgres10-aws.staging-2.banno-internal.com
+alias devdb="psql -hdev.banno.com -Ubanno_db -dbanno_all"
+alias proddb="bub postgres connect --name postgres1 --env=production-2 --role team-phobos -d banno_all"
+alias uatdb="bub postgres connect --name postgres1 --env=uat-2 --role team-phobos -d banno_all"
