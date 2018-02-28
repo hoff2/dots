@@ -31,3 +31,7 @@ STAGINGDB=postgres10-aws.staging-2.banno-internal.com
 alias devdb="psql -hdev.banno.com -Ubanno_db -dbanno_all"
 alias proddb="bub postgres connect --name postgres1 --env=production-2 --role team-phobos -d banno_all"
 alias uatdb="bub postgres connect --name postgres1 --env=uat-2 --role team-phobos -d banno_all"
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
