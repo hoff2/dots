@@ -11,8 +11,6 @@ export EDITOR='et'
 #  tmux split-window -n"Edit: $@" "$EDITOR $@"
 #}
 
-# export GITHUB_TOKEN=d21d72d776d4dcd3e420c29c94431762a16b4320
-
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
