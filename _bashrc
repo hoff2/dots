@@ -35,3 +35,4 @@ alias uatdb="bub postgres connect --name postgres1 --env=uat-2 --role team-phobo
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+[[ -r ~/.github_token ]] && . ~/.github_token
