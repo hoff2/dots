@@ -1,5 +1,5 @@
-export GITHUB_TOKEN=74c66cea0150b2c8be33cf46353fcd6dd3af1192
 export JAVA_HOME=$(/usr/libexec/java_home)
+# export GITHUB_TOKEN=d21d72d776d4dcd3e420c29c94431762a16b4320
 export GOROOT=/usr/local/opt/go/libexec
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$HOME/bin:$PATH
