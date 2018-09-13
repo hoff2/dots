@@ -30,3 +30,5 @@ email = chuck.hoffman@banno.com
     la = "!git config -l | grep alias | cut -c 7-"
 [url "ssh://git@github.com/"]
         insteadOf = https://github.com/
+[core]
+	excludesfile = /Users/choffman/.gitignore_global
