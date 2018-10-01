@@ -5,7 +5,7 @@ fi
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export EDITOR='et'
+export EDITOR='vim'
 # open editor in a split tmux window
 #function e {
 #  tmux split-window -n"Edit: $@" "$EDITOR $@"
@@ -36,3 +36,6 @@ alias uatdb="bub postgres connect --name postgres1 --env=uat-2 --role team-dream
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -r ~/.github_token ]] && . ~/.github_token
+
+# heroku autocomplete setup
+HEROKU_AC_BASH_SETUP_PATH=/Users/Chuck/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
