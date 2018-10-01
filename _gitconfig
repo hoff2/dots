@@ -1,6 +1,6 @@
 [user]
 name = Charles Hoffman
-email = chuck.hoffman@banno.com
+email = chuck@hoff2.com
 
 [alias]
     # one-line log
@@ -31,4 +31,4 @@ email = chuck.hoffman@banno.com
 [url "ssh://git@github.com/"]
         insteadOf = https://github.com/
 [core]
-	excludesfile = /Users/choffman/.gitignore_global
+	excludesfile = ~/.gitignore_global
