@@ -26,5 +26,7 @@ alias nw="tmux new-window"
 export PATH="$PATH:$HOME/.rvm/bin"
 [[ -r ~/.github_token ]] && . ~/.github_token
 
+export PATH=~/Library/Python/3.7/bin/:$PATH
+
 # heroku autocomplete setup
 HEROKU_AC_BASH_SETUP_PATH=/Users/Chuck/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
