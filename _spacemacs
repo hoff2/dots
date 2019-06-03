@@ -50,6 +50,7 @@ values."
      syntax-checking
      version-control
      ;; added
+     osx
      scala
      (ruby :variables
            ;; ruby-test-runner 'rspec
