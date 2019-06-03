@@ -20,22 +20,24 @@ eval "$(hub alias -s)"
 alias be="bundle exec "
 alias ll="ls -lah"
 alias nw="tmux new-window"
-alias pgprod="psql -hpostgres11-lks.production-2.banno-internal.com -Ubanno -dbanno_all"
-alias big-start="big machine restart && eval \$(docker-machine env banno-big) && big machine add-route"
-alias big-update="yes | big update && big compose regenerate && big pull"
-alias big-stop="big destroy && docker-machine stop banno-big"
 
-PRODDB=postgres11-lks.production-2.banno-internal.com
-UATDB=postgres10-lks.uat-2.banno-internal.com
-STAGINGDB=postgres10-aws.staging-2.banno-internal.com
-alias devdb="psql -hdev.banno.com -Ubanno_db -dbanno_all"
-alias proddb="bub postgres connect --name postgres1 --env=production-2 --role team-dreamwork -d banno_all"
-alias uatdb="bub postgres connect --name postgres1 --env=uat-2 --role team-dreamwork -d banno_all"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
+#export PATH="$PATH:$HOME/.rvm/bin"
+
 [[ -r ~/.github_token ]] && . ~/.github_token
 
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
+
 # heroku autocomplete setup
-HEROKU_AC_BASH_SETUP_PATH=/Users/Chuck/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
+#HEROKU_AC_BASH_SETUP_PATH=/Users/Chuck/Library/Caches/heroku/autocomplete/bash_setup && test -f $HEROKU_AC_BASH_SETUP_PATH && source $HEROKU_AC_BASH_SETUP_PATH;
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion || {
+    # if not found in /usr/local/etc, try the brew --prefix location
+    [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ] && \
+        . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
+}
+
+setemacs () { rm ~/.emacs.d; ln -s ~/$1 ~/.emacs.d; }
