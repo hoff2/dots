@@ -1,2 +1,0 @@
-#! /bin/bash
-docker-machine ssh banno-big "docker pull registry.banno-internal.com/$1:$2"
