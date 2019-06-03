@@ -11,6 +11,7 @@ declare -a files=(
 ## now loop through the above array
 for i in "${files[@]}"
 do
+   echo $i
    rm ~/$i
    ln -s `pwd`/$i ~/$i
 done
