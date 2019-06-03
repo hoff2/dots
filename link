@@ -1,0 +1,20 @@
+#!/bin/bash
+
+declare -a files=(
+  '.bash_profile'
+  '.bashrc'
+  '.gitconfig'
+  '.gitignore_global'
+  '.spacemacs'
+)
+
+## now loop through the above array
+for i in "${files[@]}"
+do
+   rm ~/$i
+   ln -s `pwd`/$i ~/$i
+done
+
+
+
+
