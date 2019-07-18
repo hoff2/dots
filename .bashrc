@@ -52,3 +52,7 @@ export NVM_DIR="$HOME/.nvm"
 #        nvm use
 #    fi
 #}
+
+
+source ~/.xsh
+
