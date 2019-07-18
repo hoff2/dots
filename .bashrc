@@ -33,7 +33,7 @@ alias nw="tmux new-window"
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
 
-setemacs () { rm ~/.emacs.d; ln -s ~/$1 ~/.emacs.d; }
+setemacs () { rm ~/.emacs.d; ln -s ~/emacs.d/$1 ~/.emacs.d; brew services emacs restart; }
 
 export PATH=~/Library/Python/3.7/bin/:$PATH
 
@@ -42,14 +42,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-cd() {
-    # invoke the native "cd" builtin
-    builtin cd $1
-
-    # if a .nvmrc is present and node_modules is present, run "nvm use";
-    if [[ -e .nvmrc && -d node_modules ]]; then
-        echo ".nvmrc found"
-        nvm use
-    fi
-}
-
+#cd() {
+#    # invoke the native "cd" builtin
+#    builtin cd $1
+#
+#    # if a .nvmrc is present and node_modules is present, run "nvm use";
+#    if [[ -e .nvmrc && -d node_modules ]]; then
+#        echo ".nvmrc found"
+#        nvm use
+#    fi
+#}
