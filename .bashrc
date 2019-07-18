@@ -5,8 +5,6 @@ fi
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
-export EDITOR='vim'
-
 parse_git_branch() {
  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
@@ -33,8 +31,6 @@ alias nw="tmux new-window"
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
 
-setemacs () { rm ~/.emacs.d; ln -s ~/emacs.d/$1 ~/.emacs.d; brew services emacs restart; }
-
 export PATH=~/Library/Python/3.7/bin/:$PATH
 
 # NVM
@@ -53,6 +49,6 @@ export NVM_DIR="$HOME/.nvm"
 #    fi
 #}
 
-
+source ~/dots/whicheverrc
 [[ -r ~/.xsh ]] && source ~/.xsh
 

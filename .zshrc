@@ -98,9 +98,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-dots-link () { rm ~/$1 2> /dev/null; ln -s ~/dots/$1 ~/$1 }
-dots-add () { mv ~/$1 ~/dots && {; ln -s ~/dots/$1 ~/$1; cd ~/dots; git add $1; git commit -m"add $1"; }}
-setemacs () { rm ~/.emacs.d; ln -s ~/emacs.d/$1 ~/.emacs.d; brew services emacs restart; }
-export PATH=~/bin:$PATH
-export EDITOR=vim
+source ~/dots/whicheverrc
 [[ -r ~/.xsh ]] && source ~/.xsh
