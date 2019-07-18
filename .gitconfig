@@ -32,3 +32,4 @@ email = centipedefarmer@gmail.com
         insteadOf = https://github.com/
 [core]
 	excludesfile = ~/.gitignore_global
+	autocrlf = input
