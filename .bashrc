@@ -54,5 +54,5 @@ export NVM_DIR="$HOME/.nvm"
 #}
 
 
-source ~/.xsh
+[[ -r ~/.xsh ]] && source ~/.xsh
 
