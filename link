@@ -3,6 +3,7 @@
 declare -a files=(
   '.bash_profile'
   '.bashrc'
+  '.zshrc'
   '.gitconfig'
   '.gitignore_global'
   '.spacemacs'
