@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+require 'tempfile'
+require 'digest/md5'
+Hash.new{ [] }.tap{ |r|
+  Dir[(ARGV[0] || "") + "./**/*"].reject{ |f|
+    File.directory?(f)
+  }.each do |f|
+    begin
+      r[Digest::MD5.hexdigest(File.read(f))] <<= f
+    rescue
+    end
+  end
+}.each do |h, f|
+  k, *dd = f
+  dd.each do |d|
+    begin
+      puts "#{h}\tkeeping: #{k}\tdeleting: #{d}"
+      File.delete(d) unless ARGV.include?("-d")
+    rescue
+    end
+  end
+end
