@@ -33,6 +33,8 @@ alias nw="tmux new-window"
 
 export PATH=~/Library/Python/3.7/bin/:$PATH
 
+# really need to clean this place up
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -49,6 +51,5 @@ export NVM_DIR="$HOME/.nvm"
 #    fi
 #}
 
+# stuff that will work in either bash or zsh
 source ~/dots/whicheverrc
-[[ -r ~/.xsh ]] && source ~/.xsh
-
