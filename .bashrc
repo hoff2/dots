@@ -31,7 +31,7 @@ alias nw="tmux new-window"
         . $(brew --prefix)/etc/bash_completion.d/git-completion.bash
 }
 
-export PATH=~/Library/Python/3.7/bin/:$PATH
+#export PATH=~/Library/Python/3.7/bin/:$PATH
 
 # really need to clean this place up
 
