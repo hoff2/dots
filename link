@@ -9,7 +9,6 @@ declare -a files=(
   '.spacemacs'
 )
 
-## now loop through the above array
 for i in "${files[@]}"
 do
    echo $i
