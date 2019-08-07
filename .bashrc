@@ -11,9 +11,8 @@ parse_git_branch() {
 PS1="\w\$(parse_git_branch) $ "
 
 eval "$(hub alias -s)"
-alias be="bundle exec "
-alias ll="ls -lah"
-alias nw="tmux new-window"
+alias ll="ls -lh"
+alias la="ls -lah"
 
 [[ -r ~/.github_token ]] && . ~/.github_token
 
@@ -27,20 +26,6 @@ alias nw="tmux new-window"
 }
 
 #export PATH=~/Library/Python/3.7/bin/:$PATH
-
-# really need to clean this place up
-
-
-#cd() {
-#    # invoke the native "cd" builtin
-#    builtin cd $1
-#
-#    # if a .nvmrc is present and node_modules is present, run "nvm use";
-#    if [[ -e .nvmrc && -d node_modules ]]; then
-#        echo ".nvmrc found"
-#        nvm use
-#    fi
-#}
 
 # stuff that will work in either bash or zsh
 source ~/dots/whicheverrc
