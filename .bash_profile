@@ -13,3 +13,5 @@ export PATH="/usr/local/sbin:$PATH"
 # most anything else should be in .bashrc so hie thee hence
 [[ -r ~/.bashrc ]] && . ~/.bashrc
 
+
+export PATH="$HOME/.cargo/bin:$PATH"
