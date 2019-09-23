@@ -100,3 +100,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/dots/whicheverrc
+export PATH="/usr/local/sbin:$PATH"
