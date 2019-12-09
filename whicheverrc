@@ -4,7 +4,10 @@ dots-add () {
     ln -s ~/dots/$1 ~/$1; cd ~/dots; git add $1; git commit -m"add $1"
   fi
 }
+
 setemacs () { rm ~/.emacs.d; ln -s ~/emacs.d/$1 ~/.emacs.d; brew services restart emacs; }
+
+ttf () { echo "This is a test file.\nThis is a text file.\nThis is a test text file." > ${1:-test.txt} }
 
 # rbenv
 eval "$(rbenv init -)"
@@ -13,13 +16,14 @@ eval "$(rbenv init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+
 cd() {
   # invoke the native "cd" builtin
   builtin cd $1
-  # if a .nvmrc is present and node_modules is present, run "nvm use";
-  if [[ -e .nvmrc && -d node_modules ]]; then
-    echo ".nvmrc found"
-    nvm use
+  if [[ -e .cdrc ]]; then
+    . ./.cdrc
   fi
 }
 
