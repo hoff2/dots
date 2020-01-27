@@ -8,12 +8,13 @@ declare -a files=(
   '.gitconfig'
   '.gitignore_global'
   '.spacemacs'
+  '.vimrc'
 )
 
 for i in "${files[@]}"
 do
    echo $i
-   rm ~/$i
+   rm ~/$i 2>/dev/null
    ln -s `pwd`/$i ~/$i
 done
 
