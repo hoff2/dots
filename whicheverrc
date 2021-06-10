@@ -21,6 +21,7 @@ cd() {
   # invoke the native "cd" builtin
   builtin cd $1
   if [[ -e .cdrc ]]; then
+    cat .cdrc
     . ./.cdrc
   fi
 }
