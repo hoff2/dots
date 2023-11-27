@@ -101,3 +101,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/dots/whicheverrc
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=/usr/local/Cellar/openssl@1.1/1.1.1w"
+source /usr/local/Cellar/asdf/0.13.1/libexec/asdf.sh
