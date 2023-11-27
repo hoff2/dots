@@ -1,23 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-declare -a files=(
-  '.bash_profile'
-  '.bashrc'
-  '.zshrc'
-  '.zprofile'
-  '.gitconfig'
-  '.gitignore_global'
-  '.spacemacs'
-  '.vimrc'
-)
+shopt -s dotglob
 
-for i in "${files[@]}"
-do
-   echo $i
-   rm ~/$i 2>/dev/null
-   ln -s `pwd`/$i ~/$i
+cd home
+for file in *; do
+  if [ -f "$file" ]; then
+    echo $file
+    rm ~/$file 2>/dev/null
+    ln -s `pwd`/$file ~/$file
+  fi
 done
-
-
-
-

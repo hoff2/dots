@@ -1,0 +1,1 @@
+ttf () { echo "This is a test file.\nThis is a text file.\nThis is a test text file." > ${1:-test.txt} }
